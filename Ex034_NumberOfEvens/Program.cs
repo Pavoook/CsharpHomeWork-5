@@ -2,18 +2,6 @@
 // Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int GetSize(string msg)
-{
-    Console.WriteLine(msg);
-    int number = int.Parse(Console.ReadLine());
-    while (number <= 0)
-    {
-        Console.WriteLine("Неверное значение. Введите целое число больше нуля:");
-        number = int.Parse(Console.ReadLine());
-    }
-    return number;
-}
-
 int[] CreateRandomArray(int L)
 {
     int[] array = new int[L];
@@ -45,8 +33,7 @@ int GetNumberOfEvens(int[] array)
     return n;
 }
 
-int lengthArray = GetSize("Введите длину массива:");
-int[] collection = CreateRandomArray(lengthArray);
+int[] collection = CreateRandomArray(10);
 PrintArray(collection);
 int N = GetNumberOfEvens(collection);
 Console.WriteLine($"Количество четных чисел в массиве равно {N}.");
